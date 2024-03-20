@@ -73,24 +73,24 @@ const MovieDetails = function (props) {
   return (
     <Container className="my-4">
       <Row>
-        <Col xs={12} md={6}>
+        <Col xs={12} md={4}>
           <Card>
             <Card.Img variant="top" src={img} />
             <Card.Body>
               <Card.Title className="fw-bolder">{titolo}</Card.Title>
               <Card.Text>
-                <h6 className="fw-bold">
+                <p className="fw-bold">
                   Language: <span className="fw-normal">{language}</span>
-                </h6>
-                <h6 className="fw-bold">
+                </p>
+                <p className="fw-bold">
                   Actors: <span className="fw-normal">{actors}</span>
-                </h6>
-                <h6 className="fw-bold">
+                </p>
+                <p className="fw-bold">
                   Director: <span className="fw-normal">{director}</span>
-                </h6>
-                <h6 className="fw-bold">
+                </p>
+                <p className="fw-bold">
                   Year: <span className="fw-normal">{year}</span>
-                </h6>
+                </p>
               </Card.Text>
             </Card.Body>
           </Card>

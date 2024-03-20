@@ -21,7 +21,7 @@ function App() {
             path="/tv-shows"
             element={
               <Row className="justify-content-center">
-                <Col xs={12} md={8} lg={6}>
+                <Col xs={12} md={8}>
                   <TVShows />
                 </Col>
               </Row>
