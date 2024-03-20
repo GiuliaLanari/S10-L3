@@ -1,6 +1,7 @@
 import { Component } from "react";
 import Spinner from "react-bootstrap/Spinner";
 import Alert from "react-bootstrap/Alert";
+import { Link } from "react-router-dom";
 
 class UnicaFetchMovies extends Component {
   state = {
@@ -19,7 +20,7 @@ class UnicaFetchMovies extends Component {
         }
       })
       .then((moviesObj) => {
-        console.log(moviesObj.Search);
+        // console.log(moviesObj.Search);
         this.setState({
           films: moviesObj.Search,
           isLoading: false,
@@ -56,7 +57,9 @@ class UnicaFetchMovies extends Component {
           {this.state.films.map((film) => {
             return (
               <div className="col mb-2 text-center px-1 " key={film.imdbID}>
-                <img className="img-fluid h-100 object-fit-cover" src={film.Poster} alt={film.Title} />
+                <Link to={"/movie-details/" + film.imdbID}>
+                  <img className="img-fluid h-100 object-fit-cover" src={film.Poster} alt={film.Title} />
+                </Link>
               </div>
             );
           })}

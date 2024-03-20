@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import Main from "./components/Main";
+import NotFound from "./components/NotFound";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -27,6 +28,7 @@ function App() {
             }
           />
           <Route path="/movie-details/:movieId" element={<MovieDetails />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
 
         <Footer />
